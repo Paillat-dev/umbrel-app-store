@@ -8,7 +8,7 @@ services:
       APP_PORT: 8112
     
   deluge:
-    image: binhex/arch-delugevpn
+    image: binhex/arch-delugevpn:latest
     privileged: true
     environment:
       - DEBUG=true
