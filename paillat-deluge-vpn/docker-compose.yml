@@ -12,7 +12,7 @@ services:
     init: true
     privileged: true
     environment:
-      - DEBUG=false
+      - DEBUG=true
       - PUID=0
       - VPN_PROV=protonvpn
       - VPN_CLIENT=wireguard
@@ -23,7 +23,7 @@ services:
       - PGID=0
       - VPN_ENABLED=yes
       - STRICT_PORT_FORWARD=yes
-      - DELUGE_DAEMON_LOG_LEVEL=info
+      - DELUGE_DAEMON_LOG_LEVEL=debug
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       - HOME=/home/nobody
       - TERM=xterm
