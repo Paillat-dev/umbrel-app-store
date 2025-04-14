@@ -6,7 +6,7 @@ icon: https://upload.wikimedia.org/wikipedia/commons/8/85/Deluge-Logo.svg
 category: networking
 permissions:
   - STORAGE_DOWNLOADS
-version: "1.0.0"
+version: "1.0.1"
 port: 8112
 description: >-
   Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.
@@ -17,7 +17,7 @@ submission: https://github.com/Paillat-dev/umbrel-app-store
 repo: https://github.com/Paillat-dev/umbrel-app-store
 support: https://github.com/Paillat-dev/umbrel-app-store/issues
 releaseNotes: >-
-  Blurp
+  Updated port.
 dependencies: []
 path: ""
 defaultUsername: ""
