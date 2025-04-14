@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: paillat-deluge-vpn_deluge_1
+      APP_PORT: 8112
+    
+  deluge:
+    image: binhex/arch-delugevpn
+    init: true
+    privileged: true
+    environment:
+      - DEBUG=false
+      - PUID=0
+      - VPN_PROV=protonvpn
+      - VPN_CLIENT=wireguard
+      - LAN_NETWORK=192.168.1.0/24
+      - ENABLE_PRIVOXY=yes
+      - DELUGE_WEB_LOG_LEVEL=info
+      - DELUGE_ENABLE_WEBUI_PASSWORD=no
+      - PGID=0
+      - VPN_ENABLED=yes
+      - STRICT_PORT_FORWARD=yes
+      - DELUGE_DAEMON_LOG_LEVEL=info
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - HOME=/home/nobody
+      - TERM=xterm
+      - LANG=en_GB.UTF-8
+      - VPN_USER=abcdefg+pmp
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data:/data
+      - ${UMBREL_ROOT}/data/storage/downloads:/downloads
+    restart: on-failure
