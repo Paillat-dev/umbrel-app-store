@@ -9,7 +9,6 @@ services:
     
   deluge:
     image: binhex/arch-delugevpn
-    init: true
     privileged: true
     environment:
       - DEBUG=true
