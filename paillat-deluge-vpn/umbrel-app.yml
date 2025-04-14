@@ -17,7 +17,7 @@ submission: https://github.com/Paillat-dev/umbrel-app-store
 repo: https://github.com/Paillat-dev/umbrel-app-store
 support: https://github.com/Paillat-dev/umbrel-app-store/issues
 releaseNotes: >-
-  Updated port.
+  Enabled debug logging
 dependencies: []
 path: ""
 defaultUsername: ""
